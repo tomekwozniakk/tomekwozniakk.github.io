@@ -1,0 +1,50 @@
+.person {
+    width: 100%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    background: white;
+    &__description {
+        margin: 0 16px;
+
+    }
+    &__image-container {
+        height: 130px;
+        width: 212px;
+        margin: 0 38px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    &__introduction {
+        color: $text-main;
+        margin-bottom: 42px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 32px;
+    }
+    &__link {
+        color: $text-link;
+        text-decoration: none;
+    }
+    &__mail {
+        display: flex;
+        width: 278px;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        background: $text-link;
+        color: white;
+        text-decoration: none;
+        border-radius: 64px;
+    }
+    &__title {
+        color: $text-dark;
+        margin-bottom: 16px;
+        font-weight: bold;
+        font-size: 26px;
+        &--special {
+            color: $text-blue;
+        }
+    }
+}
