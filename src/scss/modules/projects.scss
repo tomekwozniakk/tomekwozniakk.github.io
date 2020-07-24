@@ -1,0 +1,120 @@
+.projects {
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 64px 16px 88px;
+  &__description {
+    margin: 0 0 46px 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    color: $text-main;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+  &__header {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    width: 100%;
+    margin: 0 0 32px 0;
+    color: $text-dark;
+  }
+}
+
+.project {
+  background: $project-box;
+  border-radius: 16px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  padding: 0 16px 24px 16px;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.25));
+  &::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    background: $project-box-bar;
+  }
+  &__category {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: $project-category;
+    text-align: right;
+    margin-right: 4px;
+    padding: 0;
+    display: inline-block;
+    width: 40%;
+  }
+  &__circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #464a4d;
+    &--first {
+      background: firebrick;
+    }
+    &--second {
+      background: orange;
+    }
+    &--third {
+      background: green;
+    }
+  }
+  &__circles-container {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    height: 8px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__demo {
+    margin: 0 0 8px 0;
+  }
+  &__description {
+    margin: 0 0 24px 0;
+  }
+  &-gh-logo {
+    margin-top: 64px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+  }
+  &__github {
+    margin: 0 0 8px 0;
+  }
+  &__link {
+    color: $text-link;
+  }
+  &__text {
+    color: $project-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    &--title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 24px;
+      color: white;
+    }
+  }
+  &__title {
+    margin: 0 0 8px 0;
+  }
+}
