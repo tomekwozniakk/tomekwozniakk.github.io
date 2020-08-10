@@ -1,18 +1,8 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](https://tomekwozniakk.github.io/fb.png)
 
-# WTF Webpack Starter Kit 
+# Tomasz Woźniak's portfolio 
 
-Simple toolkit for your static websites development.
+This is a simple page representing my skills, showing current projects and providing a contact with me. Build as a final project during the **WTF: Co ten frontend! (WTF: What the frontend!)** course, using the [WTF: Webpack Starter Kit](https://github.com/maciejkorsan/wtf-webpack-starter) by **Maciek Korsan**. Have a nice day!
 
-## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
-
-## Available scripts
-
-`npm run start` - runs development mode
-
-`npm run build` - runs build process for production
-
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
 
