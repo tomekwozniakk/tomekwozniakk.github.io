@@ -1,52 +1,153 @@
 .person {
-    width: 100%; 
-    text-align: center;
-    background: white;
-    padding: 64px 16px 88px;
-    &__description {
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 64px 16px 88px;
+  &__curly {
+    display: none;
+  }
+  &__description {
+    max-width: 830px;
+    margin: 0 auto;
+    position: relative;
+  }
+  &__hello {
+    display: none;
+  }
+  &__image-container {
+    width: 212px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  &__image {
+    width: 96px;
+    border-radius: 50%;
+    margin-top: 34px;
+  }
+  &__introduction {
+    color: $text-main;
+    margin-bottom: 48px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  &__link {
+    color: $text-link;
+    text-decoration: none;
+  }
+  &__mail {
+    display: flex;
+    width: 278px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: $text-link;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 64px;
+  }
+  &__tick {
+    display: none;
+  }
+  &__title {
+    color: $text-dark;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    &--special {
+      color: $text-blue;
     }
-    &__image-container {
-        height: 130px;
-        width: 100%;
-        margin-bottom: 40px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .person {
+    padding: 80px 16px 176px ;
+    &__hello {
+      display: block;
+      background: $text-blue;
+      color: white;
+      padding: 16px 19px;
+      margin: 0;
+      border-radius: 16px;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      position: relative;
+      &-hand {
+        display: inline-block;
+        transform-origin: bottom center;
+        animation: waving-hand 3s linear infinite;
+      }
     }
     &__image {
-        max-width: 100%;
+      width: 178px;
+      align-self: flex-start;
+      margin-top: 50px;
+    }
+    &__image-container {
+      width: auto;
+      margin-bottom: 72px;
     }
     &__introduction {
-        color: $text-main;
-        margin-bottom: 48px;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 32px;
+      font-size: 20px;
+      line-height: 40px;
+      margin-bottom: 68px;
     }
-    &__link {
-        color: $text-link;
-        text-decoration: none;
-    }
-    &__mail {
-        display: flex;
-        width: 278px;
-        height: 48px;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        background: $text-link;
-        color: white;
-        text-decoration: none;
-        border-radius: 64px;
+    &__tick {
+      display: block;
+      position: absolute;
+      bottom: -23px;
+      left: 16px;
     }
     &__title {
-        color: $text-dark;
-        margin-bottom: 16px;
-        font-weight: bold;
-        font-size: 26px;
-        line-height: 32px;
-        &--special {
-            color: $text-blue;
-        }
+      font-size: 32px;
+      line-height: 40px;
+      margin: 0 24px;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .person {
+    &__curly {
+      display: block;
+      position: absolute;
+      top: 0;
+      &--one {
+        left: -84px;
+      }
+      &--two {
+        right: -83px;
+      }
+    }
+  }
+}
+
+@keyframes waving-hand {
+  0% {
+    transform: rotate(-15deg);
+  }
+  5% {
+    transform: rotate(15deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

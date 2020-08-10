@@ -3,22 +3,26 @@
   background: $text-blue;
   text-align: center;
   color: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 64px;
   &__article {
     &-title {
-      height: 44px;
       margin-bottom: 24px;
+      margin-top: 16px;
       font-size: 24px;
       line-height: 44px;
     }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 64px;
+    max-width: 1184px;
+    margin: 0 auto;
   }
   &__icon {
     font-size: 64px;
   }
   &__list {
-    width: 288px;
+    max-width: 300px;
     margin: 0 auto;
     list-style: none;
     padding-left: 0;
@@ -30,7 +34,7 @@
       margin-right: 12px;
       width: 2px;
       height: 2px;
-      background: #DBEAF7;
+      background: #dbeaf7;
       border-radius: 50%;
     }
     &-element {
@@ -47,9 +51,33 @@
     }
   }
   &__title {
-    margin: 0 auto;
-    width: 100%;
     font-size: 36px;
     line-height: 48px;
+    text-align: center;
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .skills {
+    padding: 80px 16px 176px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills {
+    &-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 24px;
+    }
+    &__list {
+      max-width: 225px;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 128px;
+    }
   }
 }
